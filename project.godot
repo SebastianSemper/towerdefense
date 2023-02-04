@@ -1,0 +1,61 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node",
+"class": "Creep",
+"language": "GDScript",
+"path": "res://creeps/creep.gd"
+}, {
+"base": "Node",
+"class": "GraphVertex",
+"language": "GDScript",
+"path": "res://engine/graph_vertex.gd"
+}, {
+"base": "Node",
+"class": "Stage",
+"language": "GDScript",
+"path": "res://stages/stage.gd"
+}, {
+"base": "Node",
+"class": "Tower",
+"language": "GDScript",
+"path": "res://towers/tower.gd"
+}, {
+"base": "Node",
+"class": "VertexDACG",
+"language": "GDScript",
+"path": "res://engine/vertex_dacg.gd"
+} ]
+_global_script_class_icons={
+"Creep": "",
+"GraphVertex": "",
+"Stage": "",
+"Tower": "",
+"VertexDACG": ""
+}
+
+[application]
+
+config/name="Tower Defense"
+run/main_scene="res://main.tscn"
+config/icon="res://icon.png"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"

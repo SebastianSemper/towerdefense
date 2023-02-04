@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <asset>
+    <contributor>
+      <author>Blender User</author>
+      <authoring_tool>Blender 3.4.1 commit date:2022-12-20, commit time:08:50, hash:ef9ca44dee7f</authoring_tool>
+    </contributor>
+    <created>2023-02-04T16:02:35</created>
+    <modified>2023-02-04T16:02:35</modified>
+    <unit name="meter" meter="1"/>
+    <up_axis>Z_UP</up_axis>
+  </asset>
+  <library_images/>
+  <library_geometries>
+    <geometry id="c_i_w-mesh" name="c_i_w">
+      <mesh>
+        <source id="c_i_w-mesh-positions">
+          <float_array id="c_i_w-mesh-positions-array" count="24">-3 -3 0 3 -3 0 3 3 0 -3 0 0 0 -3 0 3 0 0 0 3 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#c_i_w-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="c_i_w-mesh-normals">
+          <float_array id="c_i_w-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#c_i_w-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="c_i_w-mesh-map-0">
+          <float_array id="c_i_w-mesh-map-0-array" count="24">0.5 0 0 0.5 0 0 1 0 0.5 0.5 0.5 0 1 0 1 0.5 0.5 0.5 1 0.5 1 1 0.5 1</float_array>
+          <technique_common>
+            <accessor source="#c_i_w-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="c_i_w-mesh-vertices">
+          <input semantic="POSITION" source="#c_i_w-mesh-positions"/>
+        </vertices>
+        <triangles count="4">
+          <input semantic="VERTEX" source="#c_i_w-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#c_i_w-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#c_i_w-mesh-map-0" offset="2" set="0"/>
+          <p>4 0 0 3 0 1 0 0 2 1 0 3 7 0 4 4 0 5 1 0 6 5 0 7 7 0 8 5 0 9 2 0 10 6 0 11</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="c_o_w-mesh" name="c_o_w">
+      <mesh>
+        <source id="c_o_w-mesh-positions">
+          <float_array id="c_o_w-mesh-positions-array" count="9">3 -3 0 0 -3 0 3 0 0</float_array>
+          <technique_common>
+            <accessor source="#c_o_w-mesh-positions-array" count="3" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="c_o_w-mesh-normals">
+          <float_array id="c_o_w-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#c_o_w-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="c_o_w-mesh-map-0">
+          <float_array id="c_o_w-mesh-map-0-array" count="6">1 0.5 0.5 0 1 0</float_array>
+          <technique_common>
+            <accessor source="#c_o_w-mesh-map-0-array" count="3" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="c_o_w-mesh-vertices">
+          <input semantic="POSITION" source="#c_o_w-mesh-positions"/>
+        </vertices>
+        <triangles count="1">
+          <input semantic="VERTEX" source="#c_o_w-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#c_o_w-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#c_o_w-mesh-map-0" offset="2" set="0"/>
+          <p>2 0 0 1 0 1 0 0 2</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="e_w-mesh" name="e_w">
+      <mesh>
+        <source id="e_w-mesh-positions">
+          <float_array id="e_w-mesh-positions-array" count="18">3 -3 0 3 3 0 0 -3 0 0 3 0 0 0 0 3 0 0</float_array>
+          <technique_common>
+            <accessor source="#e_w-mesh-positions-array" count="6" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="e_w-mesh-normals">
+          <float_array id="e_w-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#e_w-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="e_w-mesh-map-0">
+          <float_array id="e_w-mesh-map-0-array" count="12">1 0.5 1 1 0.5 1 1 0 1 0.5 0.5 0.5</float_array>
+          <technique_common>
+            <accessor source="#e_w-mesh-map-0-array" count="6" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="e_w-mesh-vertices">
+          <input semantic="POSITION" source="#e_w-mesh-positions"/>
+        </vertices>
+        <lines count="1">
+          <input semantic="VERTEX" source="#e_w-mesh-vertices" offset="0"/>
+          <p>0 2</p>
+        </lines>
+        <triangles count="2">
+          <input semantic="VERTEX" source="#e_w-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#e_w-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#e_w-mesh-map-0" offset="2" set="0"/>
+          <p>5 0 0 1 0 1 3 0 2 0 0 3 5 0 4 4 0 5</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="f_w-mesh" name="f_w">
+      <mesh>
+        <source id="f_w-mesh-positions">
+          <float_array id="f_w-mesh-positions-array" count="27">-3 -3 0 3 -3 0 -3 3 0 3 3 0 -3 0 0 0 -3 0 3 0 0 0 3 0 0 0 0</float_array>
+          <technique_common>
+            <accessor source="#f_w-mesh-positions-array" count="9" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="f_w-mesh-normals">
+          <float_array id="f_w-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#f_w-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="f_w-mesh-map-0">
+          <float_array id="f_w-mesh-map-0-array" count="48">1 0.5 0.5 1 0.5 0.5 0.5 0.5 0 1 0 0.5 0.5 0 0 0.5 0 0 1 0 0.5 0.5 0.5 0 1 0.5 1 1 0.5 1 0.5 0.5 0.5 1 0 1 0.5 0 0.5 0.5 0 0.5 1 0 1 0.5 0.5 0.5</float_array>
+          <technique_common>
+            <accessor source="#f_w-mesh-map-0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="f_w-mesh-vertices">
+          <input semantic="POSITION" source="#f_w-mesh-positions"/>
+        </vertices>
+        <triangles count="8">
+          <input semantic="VERTEX" source="#f_w-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#f_w-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#f_w-mesh-map-0" offset="2" set="0"/>
+          <p>6 0 0 7 0 1 8 0 2 8 0 3 2 0 4 4 0 5 5 0 6 4 0 7 0 0 8 1 0 9 8 0 10 5 0 11 6 0 12 3 0 13 7 0 14 8 0 15 7 0 16 2 0 17 5 0 18 8 0 19 4 0 20 1 0 21 6 0 22 8 0 23</p>
+        </triangles>
+      </mesh>
+    </geometry>
+    <geometry id="c_o-mesh" name="c_o">
+      <mesh>
+        <source id="c_o-mesh-positions">
+          <float_array id="c_o-mesh-positions-array" count="36">3 -3 0 0 -3 0 3 0 0 0 0 0 -3 0 2 -3 -3 2 3 0 2 3 3 2 0 3 2 -3 3 2 0 -3 2 0 0 2</float_array>
+          <technique_common>
+            <accessor source="#c_o-mesh-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="c_o-mesh-normals">
+          <float_array id="c_o-mesh-normals-array" count="9">0 -1 0 0 0 1 1 0 0</float_array>
+          <technique_common>
+            <accessor source="#c_o-mesh-normals-array" count="3" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="c_o-mesh-map-0">
+          <float_array id="c_o-mesh-map-0-array" count="48">0.5 0.5 1 0.5 1 0.5 0.5 0.5 0.5 0 1 0 1 0.5 0.5 0.5 0.5 0.5 1 0.5 1 1 0.5 1 0 0.5 0.5 0.5 0.5 1 0 1 0 0 0.5 0 0.5 0.5 0 0.5 0.5 0 0.5 0.5 0.5 0.5 0.5 0</float_array>
+          <technique_common>
+            <accessor source="#c_o-mesh-map-0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="c_o-mesh-vertices">
+          <input semantic="POSITION" source="#c_o-mesh-positions"/>
+        </vertices>
+        <polylist count="6">
+          <input semantic="VERTEX" source="#c_o-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#c_o-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#c_o-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>3 0 0 2 0 1 6 0 2 11 0 3 1 1 4 0 1 5 2 1 6 3 1 7 11 1 8 6 1 9 7 1 10 8 1 11 4 1 12 11 1 13 8 1 14 9 1 15 5 1 16 10 1 17 11 1 18 4 1 19 1 2 20 3 2 21 11 2 22 10 2 23</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="c_i-mesh" name="c_i">
+      <mesh>
+        <source id="c_i-mesh-positions">
+          <float_array id="c_i-mesh-positions-array" count="36">-3 -3 0 3 -3 0 3 3 0 -3 0 0 0 -3 0 3 0 0 0 3 0 0 0 0 0 3 2 -3 3 2 -3 0 2 0 0 2</float_array>
+          <technique_common>
+            <accessor source="#c_i-mesh-positions-array" count="12" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="c_i-mesh-normals">
+          <float_array id="c_i-mesh-normals-array" count="9">0 0 1 0 -1 0 1 0 0</float_array>
+          <technique_common>
+            <accessor source="#c_i-mesh-normals-array" count="3" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="c_i-mesh-map-0">
+          <float_array id="c_i-mesh-map-0-array" count="48">0.5 0.5 1 0.5 1 1 0.5 1 0 0 0.5 0 0.5 0.5 0 0.5 0.5 0 1 0 1 0.5 0.5 0.5 0 0.5 0.5 0.5 0.5 1 0 1 0 0.5 0.5 0.5 0.5 0.5 0 0.5 0.5 0.5 0.5 1 0.5 1 0.5 0.5</float_array>
+          <technique_common>
+            <accessor source="#c_i-mesh-map-0-array" count="24" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="c_i-mesh-vertices">
+          <input semantic="POSITION" source="#c_i-mesh-positions"/>
+        </vertices>
+        <polylist count="6">
+          <input semantic="VERTEX" source="#c_i-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#c_i-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#c_i-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>7 0 0 5 0 1 2 0 2 6 0 3 0 0 4 4 0 5 7 0 6 3 0 7 4 0 8 1 0 9 5 0 10 7 0 11 10 0 12 11 0 13 8 0 14 9 0 15 3 1 16 7 1 17 11 1 18 10 1 19 7 2 20 6 2 21 8 2 22 11 2 23</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="e-mesh" name="e">
+      <mesh>
+        <source id="e-mesh-positions">
+          <float_array id="e-mesh-positions-array" count="24">3 -3 0 3 3 0 0 -3 0 0 3 0 -3 3 2 -3 -3 2 0 3 2 0 -3 2</float_array>
+          <technique_common>
+            <accessor source="#e-mesh-positions-array" count="8" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="e-mesh-normals">
+          <float_array id="e-mesh-normals-array" count="6">0 0 1 1 0 0</float_array>
+          <technique_common>
+            <accessor source="#e-mesh-normals-array" count="2" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="e-mesh-map-0">
+          <float_array id="e-mesh-map-0-array" count="24">0.5 0 1 0 1 1 0.5 1 0 0 0.5 0 0.5 1 0 1 0.5 0 0.5 1 0.5 1 0.5 0</float_array>
+          <technique_common>
+            <accessor source="#e-mesh-map-0-array" count="12" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="e-mesh-vertices">
+          <input semantic="POSITION" source="#e-mesh-positions"/>
+        </vertices>
+        <polylist count="3">
+          <input semantic="VERTEX" source="#e-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#e-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#e-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 4 4 </vcount>
+          <p>2 0 0 0 0 1 1 0 2 3 0 3 5 0 4 7 0 5 6 0 6 4 0 7 2 1 8 3 1 9 6 1 10 7 1 11</p>
+        </polylist>
+      </mesh>
+    </geometry>
+    <geometry id="f-mesh" name="f">
+      <mesh>
+        <source id="f-mesh-positions">
+          <float_array id="f-mesh-positions-array" count="12">-3 -3 0 3 -3 0 -3 3 0 3 3 0</float_array>
+          <technique_common>
+            <accessor source="#f-mesh-positions-array" count="4" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="f-mesh-normals">
+          <float_array id="f-mesh-normals-array" count="3">0 0 1</float_array>
+          <technique_common>
+            <accessor source="#f-mesh-normals-array" count="1" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="f-mesh-map-0">
+          <float_array id="f-mesh-map-0-array" count="8">0 0 1 0 1 1 0 1</float_array>
+          <technique_common>
+            <accessor source="#f-mesh-map-0-array" count="4" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="f-mesh-vertices">
+          <input semantic="POSITION" source="#f-mesh-positions"/>
+        </vertices>
+        <polylist count="1">
+          <input semantic="VERTEX" source="#f-mesh-vertices" offset="0"/>
+          <input semantic="NORMAL" source="#f-mesh-normals" offset="1"/>
+          <input semantic="TEXCOORD" source="#f-mesh-map-0" offset="2" set="0"/>
+          <vcount>4 </vcount>
+          <p>0 0 0 1 0 1 3 0 2 2 0 3</p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_visual_scenes>
+    <visual_scene id="Scene" name="Scene">
+      <node id="c_o" name="c_o" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#c_o-mesh" name="c_o"/>
+        <node id="c_o_b" name="c_o_b" type="NODE">
+          <matrix sid="transform">1 0 0 -1.5 0 1 0 1.5 0 0 1 2 0 0 0 1</matrix>
+        </node>
+        <node id="c_o_w" name="c_o_w" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#c_o_w-mesh" name="c_o_w"/>
+        </node>
+      </node>
+      <node id="c_i" name="c_i" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#c_i-mesh" name="c_i"/>
+        <node id="c_i_b" name="c_i_b" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <node id="c_i_b_1" name="c_i_b_1" type="NODE">
+            <matrix sid="transform">1 0 0 -1.5 0 1 0 1.5 0 0 1 2 0 0 0 1</matrix>
+          </node>
+        </node>
+        <node id="c_i_w" name="c_i_w" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#c_i_w-mesh" name="c_i_w"/>
+        </node>
+      </node>
+      <node id="e" name="e" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#e-mesh" name="e"/>
+        <node id="e_b" name="e_b" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="e_w" name="e_w" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#e_w-mesh" name="e_w"/>
+        </node>
+      </node>
+      <node id="f" name="f" type="NODE">
+        <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        <instance_geometry url="#f-mesh" name="f"/>
+        <node id="f_b" name="f_b" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+        </node>
+        <node id="f_w" name="f_w" type="NODE">
+          <matrix sid="transform">1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1</matrix>
+          <instance_geometry url="#f_w-mesh" name="f_w"/>
+        </node>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#Scene"/>
+  </scene>
+</COLLADA>
