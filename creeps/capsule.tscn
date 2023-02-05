@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://creeps/capsule.gd" type="Script" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.847059, 0.32549, 0.741176, 1 )
+
+[sub_resource type="CapsuleMesh" id=1]
+material = SubResource( 2 )
+radius = 0.531
+radial_segments = 7
+rings = 1
+
+[sub_resource type="CapsuleShape" id=3]
+radius = 0.54018
+height = 1.06463
+
+[node name="capsule" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="mesh" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.546475, 0 )
+mesh = SubResource( 1 )
+
+[node name="area" type="Area" parent="."]
+
+[node name="shape" type="CollisionShape" parent="area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5459, 0 )
+shape = SubResource( 3 )

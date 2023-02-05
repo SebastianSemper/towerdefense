@@ -1,9 +1,9 @@
 extends Node
 class_name Stage
 
-var debug = true
+var debug = false
 
-var TILE_CODES: Array = ["f", "e", "c_o", "c_i"]
+var TILE_CODES: Array = ["f", "e", "c_o", "c_i", "in", "out"]
 var ROT_CODES: Array = [
 	Transform.IDENTITY.rotated(Vector3(0,1,0), 0),
 	Transform.IDENTITY.rotated(Vector3(0,1,0), PI/2),
@@ -15,6 +15,10 @@ var tiles_ressource = null
 
 var build_spots = []
 var waypoint_tiles = []
+var waypoint_graph: VertexDACG
+
+var extent_x: Vector2
+var extent_z: Vector2
 
 func get_map() -> Array:
 	return [[]]
@@ -50,11 +54,20 @@ func construct(parent: Node):
 	var tile_size = 6
 	var start_x = - 0.5 * float(num_u_tiles - 1) * tile_size
 	var pos_x = start_x
-	var pos_z = - 0.5 * float(num_v_tiles -1) * tile_size
+	var pos_z = - 0.5 * float(num_v_tiles - 1) * tile_size
+	
+	Manager.stage_extent_x = Vector2(
+		- 0.5 * float(num_u_tiles) * tile_size,
+		+ 0.5 * float(num_u_tiles) * tile_size
+	)
+	Manager.stage_extent_z = Vector2(
+		- 0.5 * float(num_v_tiles) * tile_size,
+		+ 0.5 * float(num_v_tiles) * tile_size
+	)
+	
 	for tt1 in self.get_map():
 		for tt2 in tt1:
 			var current_tile = get_tile_element(tiles, tt2)
-			
 			var rotation = get_tile_rotation(tt2)
 			
 			current_tile.transform = rotation
@@ -72,11 +85,20 @@ func construct(parent: Node):
 			pos_x += tile_size
 		pos_x = start_x
 		pos_z += tile_size
+	
+	
 
 func _connect_graph_vertices(vertices: Array):
 	for vv1 in vertices:
 		for vv2 in vertices:
 			if vv1 != vv2:
+				if debug:
+					var co = MeshInstance.new()
+					var cm = CubeMesh.new()
+					co.mesh = cm
+					co.scale = Vector3(0.1, 0.2, 0.1)
+					co.translation = 0.5 * (vv1.translation + vv2.translation)
+					add_child(co)
 				vv1.before.append(vv2)
 				vv2.after.append(vv1)
 
@@ -84,7 +106,7 @@ func gen_waypoint_mesh():
 	if not len(waypoint_tiles):
 		return
 	
-	var waypoint_graph = VertexDACG.new()
+	waypoint_graph = VertexDACG.new()
 	
 	for tile in waypoint_tiles:
 		var tile_mesh_tool = MeshDataTool.new()
@@ -100,15 +122,16 @@ func gen_waypoint_mesh():
 						tile_mesh_tool.get_edge_vertex(ee, 1)
 					)
 				)
-				var graph_match = waypoint_graph.find_at(edge_middle_pos)
+				var global_edge_pos = tile.global_transform.xform(edge_middle_pos)
+				var graph_match = waypoint_graph.find_at(global_edge_pos)
 				if graph_match == null:
 					var new_point = GraphVertex.new()
-					new_point.translation = tile.global_transform.xform(edge_middle_pos)
+					new_point.translation = global_edge_pos
 					if debug:
 						var co = MeshInstance.new()
 						var cm = CubeMesh.new()
 						co.mesh = cm
-						co.scale = Vector3(0.1, 0.2, 0.1)
+						co.scale = Vector3(0.2, 0.4, 0.2)
 						co.translation = new_point.translation
 						add_child(co)
 					waypoint_graph.add_new_vertex(new_point)
@@ -116,9 +139,7 @@ func gen_waypoint_mesh():
 				else:
 					candidate_vertices.append(graph_match)
 			_connect_graph_vertices(candidate_vertices)
-	print(len(waypoint_graph.vertices))
-	for vv in waypoint_graph.vertices:
-		print(vv)
-		print(vv.before)
-		print(vv.after)
+			
+	print(waypoint_graph.vertices.size())
+	
 
